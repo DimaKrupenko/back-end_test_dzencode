@@ -1,14 +1,5 @@
 const { Schema, model } = require('mongoose');
 
-const Joi = require('joi');
-
-const joiSchema = Joi.object({
-  username: Joi.string().required(),
-  email: Joi.string().required(),
-  homepage: Joi.link(),
-  text: Joi.string().required(),
-});
-
 const commentsSchema = new Schema(
   {
     username: {
@@ -35,5 +26,4 @@ const Comments = model('comment', commentsSchema);
 
 module.exports = {
   Comments,
-  joiSchema,
 };
