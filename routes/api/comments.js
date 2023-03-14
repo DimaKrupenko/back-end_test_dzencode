@@ -6,6 +6,6 @@ const { comments: ctrl } = require('../../controllers/index');
 
 router.get('/', ctrl.getAll);
 
-// router.post('/', ctrl.add);
+router.post('/', ctrl.add);
 
 module.exports = router;
